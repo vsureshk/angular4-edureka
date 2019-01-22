@@ -1,0 +1,16 @@
+
+<button type="button" (click)="toggleHero()" name="button">Toggle Heroes</button>
+<div class="" *ngIf="toggleHeroFlag">
+  <div class="" *ngFor="let hero of dcHeroes; let i=index" (click)="selectHero(hero)">
+  {{i+1}}){{hero}}
+  </div>
+</div>
+
+<div [ngSwitch]="selectedHero" [ngStyle]="myStyle">
+  <div *ngSwitchCase="dcHeroes[0]">Bruce wayne</div>
+  <div *ngSwitchCase="'Superman'">clarke kent</div>
+  <div *ngSwitchCase="'Wonder Woman'">princess diana</div>
+  <div *ngSwitchCase="'Flash'">barry allen</div>
+  <div *ngSwitchDefault>none of the hero has been selected</div>
+</div>
+<button type="button" (click)="setStyle()" name="button">change style</button>

@@ -9,12 +9,14 @@ import { FirstComponent } from './first/first.component';
 
 import { AppComponent } from './app.component';
 import { GOTCharacterComponent } from './gotcharacter/gotcharacter.component';
+import { DirectiveExampleComponent } from './directive-example/directive-example.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FirstComponent,
-    GOTCharacterComponent
+    GOTCharacterComponent,
+    DirectiveExampleComponent
   ],
   imports: [
     BrowserModule,
